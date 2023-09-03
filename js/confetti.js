@@ -9,7 +9,7 @@ confettiButton.addEventListener("click", () => {
         let canvas = document.createElement("canvas");
 
         // Select the container element with the class "container"
-        let container = document.querySelector(".container");
+        let container = document.querySelector(".grid-container");
 
         // Set the canvas dimensions
         canvas.width = window.innerWidth;

@@ -1,24 +1,56 @@
-*{
+:root {
+    --dark-green: rgb(26, 92, 37);
+    --light-green: rgb(61, 221, 61);
+    --mint: rgb(152, 251, 152);
+    --dark-red: rgb(66, 26, 26);
+    --light-red: rgb(163, 0, 0);
+    --light-blue: rgb(10, 173, 255);
+    --dark-blue: rgb(7, 70, 102);
+    --dark-gray: rgb(31, 29, 29);
+    --gold: rgb(212,175,55);
+
+    --midnight-blue: #001f3f;
+    --silver: #D3D3D3;
+    --white: #FFFFFF;
+    --yellow: #FFD700;
+    --pastel: #c4c4c4;
+    --lavendar: #E6E6FA;
+
+
+
+}
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
-    background: url(../images/Hexagon_Background.jpg);
-}
-
-h1{
+h1 {
     text-align: center;
     color: white;
 }
 
-.flex-container{
+h3{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p{
+    line-height: 25px;
+}
+
+ul li{
+    margin-bottom: 26px;
+}
+
+.flex-container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.projects{
+.projects {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -27,40 +59,171 @@ h1{
     align-items: center;
     text-align: center;
     margin: auto;
-    background-color: rgb(43, 116, 116);
 }
 
-.game1, .game2{
+#StoryGame,
+#GenericGame {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     margin: 20px 0;
-    background-color: rgb(43, 226, 217);
+    background-color: var(--dark-gray);
     max-width: min-content;
-    border-style: solid;
-    border-color: aqua;
-}
-
-.game-info img{
+    border: 3px solid;
+    box-shadow: 0 0 25px 1px var(--light-blue);
+    border-style: none;
+    border-radius: 20px;
     padding: 10px;
 }
 
+#GenericGame{
+    box-shadow: 0 0 25px 1px var(--light-blue);
+}
+
+.game-info .image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, var(--dark-gray) 9%, #00000000 50%, var(--dark-gray) 96%);
+}
+
+.game-info {
+    display: inline-block;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    margin: 10px;
+}
 
 .textWrapper {
     display: flex;
     margin: auto;
+    justify-content: center;
+    align-items: flex-start;
     padding: 10px;
     gap: 10px;
     font-size: 17px;
 }
 
-.info{
-    background-color: rgb(0, 255, 42);
+#StoryGameInfo {
+    /* background-color: rgb(0, 255, 42); */
+    width: 45%;
+    border-radius: 10px;
 }
 
-.role{
-    background-color: blueviolet;
+.vertical-line {
+    width: 1px;
+    /* Adjust the width of the line */
+    height: 200px;
+    /* Adjust the height of the line */
+    background-color: white;
+    /* Adjust the color of the line */
+    margin: 20px;
+    text-align: center;
 }
+
+#StoryGameRole {
+    /* background-color: blueviolet; */
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+#StoryGameRole ul {
+    margin: 0;
+    padding: 0;
+    list-style: square;
+}
+
+#StoryGame h3 {
+    color: beige;
+}
+
+#StoryGame p, #StoryGame ul li {
+    color: lightskyblue;
+}
+
+#GenericGame h3{
+    color: beige;
+}
+
+#GenericGame p, #GenericGame ul li{
+    color: lightskyblue;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+@keyframes move-twinkle-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+.stars,
+.twinkling,
+.clouds {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200%;
+}
+    
+.stars {
+    background: #000 url(../images/stars.png) repeat top center;
+    z-index: -3;
+}
+
+.twinkling {
+    background: transparent url(../images/twinkling.png) repeat top center;
+    z-index: -2;
+    animation: move-twinkle-back 200s linear infinite;
+}
+
+.clouds {
+    background: transparent url(../images/clouds.png) repeat top center;
+    z-index: -1;
+    opacity: .4;
+    animation: move-clouds-back 200s linear infinite;
+}
+
+
+
+
+
+
+
+
 
 
 /* .game {
