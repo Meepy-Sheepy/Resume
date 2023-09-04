@@ -217,7 +217,7 @@ a:visited {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 300%;
+    height: 325%;
 }
 
 .stars {
@@ -289,12 +289,82 @@ a:visited {
 }
 
 
-@media screen and (max-width: 1100px) {
-    .project-item {
-      width: 100%;
+@media screen and (max-width: 1800px) {
+
+    .stars,
+    .twinkling,
+    .clouds {
+        height: 525%;
     }
-  
-    .solo-art-item {
-      width: calc(50% - 10px);
+
+}
+
+@media screen and (max-width: 1000px) {
+    .flex-object {
+        flex-direction: column;
+        align-items: center;
+        /* Allow elements to fill the entire width */
+        max-width: 100%;
+        /* Allow elements to become narrower */
+        min-width: 0;
+    }
+
+    div.image-container {
+        width: auto;
+    }
+
+    div.image-container img {
+        width: 100%;
+    }
+
+    .stars,
+    .twinkling,
+    .clouds {
+        height: 535%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .stars,
+    .twinkling,
+    .clouds {
+        height: 540%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .stars,
+    .twinkling,
+    .clouds {
+        height: 520%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    .stars,
+    .twinkling,
+    .clouds {
+        height: 500%;
+    }
+}
+
+@media screen and (max-width: 590px) {
+
+    .stars,
+    .twinkling,
+    .clouds {
+        height: 520%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .stars,
+    .twinkling,
+    .clouds {
+        height: 540%;
     }
 }

@@ -27,57 +27,6 @@ body {
     pointer-events: none;
 }
 
-@keyframes move-clouds-back {
-    from {
-        background-position: 0 0;
-    }
-
-    to {
-        background-position: 10000px 0;
-    }
-}
-
-@keyframes move-twinkle-back {
-    from {
-        background-position: 0 0;
-    }
-
-    to {
-        background-position: -10000px 5000px;
-    }
-}
-
-.stars,
-.twinkling,
-.clouds {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.stars {
-    background: #000 url(../images/stars.png) repeat top center;
-    z-index: -3;
-}
-
-.twinkling {
-    background: transparent url(../images/twinkling.png) repeat top center;
-    z-index: -2;
-    animation: move-twinkle-back 200s linear infinite;
-}
-
-.clouds {
-    background: transparent url(../images/clouds.png) repeat top center;
-    z-index: -1;
-    opacity: .4;
-    animation: move-clouds-back 200s linear infinite;
-}
-
 /* .spaceBackground {
     position: fixed;
     top: 50%;
@@ -175,12 +124,38 @@ body {
     filter: blur(2px);
 }
 
+h1{
+    grid-area: top;
+    font-family: 'VT323', monospace;
+    color: white;
+    margin-top: 430px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 70px;
+    letter-spacing: 1px;
+}
+
+section{
+    grid-area: top;
+    color: white;
+    margin-top: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+section{
+    font-size: 18px;
+    text-align: left;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+}
+
 p {
     grid-area: text;
     color: rgb(109, 186, 250);
     text-align: center;
     margin: auto;
-    font-size: 19px;
+    font-size: 20px;
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 600;
     width: 60%;
@@ -258,6 +233,59 @@ p {
 #email:hover {
     scale: 1.5;
 }
+
+
+@keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+@keyframes move-twinkle-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+.stars,
+.twinkling,
+.clouds {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.stars {
+    background: #000 url(../images/stars.png) repeat top center;
+    z-index: -3;
+}
+
+.twinkling {
+    background: transparent url(../images/twinkling.png) repeat top center;
+    z-index: -2;
+    animation: move-twinkle-back 200s linear infinite;
+}
+
+.clouds {
+    background: transparent url(../images/clouds.png) repeat top center;
+    z-index: -1;
+    opacity: .4;
+    animation: move-clouds-back 200s linear infinite;
+}
+
 
 @media only screen and (max-width:1820px) {
     .grid-container {
