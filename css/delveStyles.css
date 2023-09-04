@@ -26,10 +26,11 @@
 h1 {
     text-align: center;
     margin-top: 20px;
-    font-size: 42px;
+    font-size: 50px;
     color: white;
     text-decoration: underline;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'VT323', monospace;
+    letter-spacing: 1px;
 }
 
 h3 {
@@ -84,14 +85,20 @@ a:visited {
     margin: auto;
 }
 
-#StoryGame,
-#GenericGame,
-#EIYEGame,
-#DeerSim {
+.flex-object {
+    transition-property: scale;
+    transition: 0.75s;
+}
+
+.flex-object:hover {
+    transform: scale(1.01);
+}
+
+.flex-object {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 20px 0;
+    margin: 20px 10px;
     background-color: var(--dark-gray);
     max-width: min-content;
     border: 3px solid;
@@ -162,21 +169,12 @@ a:visited {
     width: 45%;
 }
 
-#StoryGame h3,
-#GenericGame h3,
-#EIYEGame h3,
-#DeerSim h3 {
+.flex-object h3 {
     color: beige;
 }
 
-#StoryGame p,
-#StoryGame ul li,
-#GenericGame p,
-#GenericGame ul li,
-#EIYEGame p,
-#EIYEGame ul li,
-#DeerSim p,
-#DeerSim ul li {
+.flex-object p,
+.flex-object ul li {
     color: lightskyblue;
 }
 
@@ -269,7 +267,6 @@ a:visited {
         0 0 100px rgb(0, 140, 255);
 }
 
-
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
@@ -292,10 +289,12 @@ a:visited {
 }
 
 
-/* #GenericGame h3{
-    color: beige;
-} */
-
-/* #GenericGame p, #GenericGame ul li{
-    color: lightskyblue;
-} */
+@media screen and (max-width: 1100px) {
+    .project-item {
+      width: 100%;
+    }
+  
+    .solo-art-item {
+      width: calc(50% - 10px);
+    }
+}
