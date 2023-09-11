@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: black;
     margin: 0;
@@ -124,7 +128,7 @@ body {
     filter: blur(2px);
 }
 
-h1{
+h1 {
     grid-area: top;
     font-family: 'VT323', monospace;
     color: white;
@@ -135,7 +139,7 @@ h1{
     letter-spacing: 1px;
 }
 
-section{
+section {
     grid-area: top;
     color: white;
     margin-top: 500px;
@@ -143,7 +147,7 @@ section{
     margin-left: auto;
 }
 
-section{
+section {
     font-size: 18px;
     text-align: left;
     font-family: 'Chakra Petch', sans-serif;
@@ -287,7 +291,7 @@ p {
 }
 
 
-@media only screen and (max-width:1820px) {
+/* @media only screen and (max-width:1820px) {
     .grid-container {
         display: grid;
         grid-template-areas:
@@ -301,9 +305,9 @@ p {
         justify-content: center;
         text-align: center;
     }
-}
+} */
 
-@media only screen and (max-width:1400px) {
+@media only screen and (max-width:1819px) and (min-width:1151px) {
     .grid-container {
         display: grid;
         grid-template-areas:
@@ -318,34 +322,8 @@ p {
         text-align: center;
     }
 
-    .socials {
-        grid-area: socials;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        width: 40%;
-        font-size: 24px;
-    }
-
-    #MeAndNico {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition-property: none;
-        transition: 0.5s;
-    }
-
-    .centeredImage{
+    .centeredImage {
         pointer-events: none;
-    }
-
-    .centeredImage:hover #MeAndNico {
-        filter: none;
-    }
-
-    .imageText {
-        visibility: hidden;
     }
 }
 
@@ -365,96 +343,86 @@ p {
     }
 
     .socials {
-        grid-area: socials;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        width: 45%;
-        font-size: 24px;
+        width: 60%
+    }
+
+    .stars,
+    .twinkling,
+    .clouds {
+        height: 123%;
     }
 }
 
-@media only screen and (max-width:900px) {
-    .grid-container {
-        display: grid;
-        grid-template-areas:
-            "top top "
-            "top top "
-            "text text "
-            "delve socials ";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1.5fr 1.5fr 1fr 1.5fr;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .socials {
-        grid-area: socials;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        width: 50%;
-        font-size: 24px;
-    }
-}
-
-@media only screen and (max-width:700px) {
+@media only screen and (max-width:900px) and (min-width: 601px) {
 
     .grid-container {
         display: grid;
         grid-template-areas:
-            "top top "
-            "top top "
-            "text text "
-            "delve socials ";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1.5fr;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .socials {
-        grid-area: socials;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        width: 75%;
-        font-size: 24px;
-    }
-}
-
-@media only screen and (max-width:500px) {
-    .grid-container {
-        display: grid;
-        grid-template-areas:
-            "top top "
-            "top top "
-            "text text "
-            "delve delve "
-            "socials socials";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: .5fr .5fr .8fr .3fr .3fr;
+            "top"
+            "top"
+            "text"
+            "delve"
+            "socials";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
         align-items: center;
         justify-content: center;
         text-align: center;
     }
 
     .delveButton {
-        transform: translateX(50%);
+        margin: 30px;
     }
 
     .socials {
-        grid-area: socials;
-        display: flex;
-        justify-content: space-between;
+        padding-top: 20px;
+    }
+}
+
+
+@media only screen and (max-width:600px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "top"
+            "text"
+            "delve"
+            "socials";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
         align-items: center;
-        margin: auto;
-        width: 75%;
-        font-size: 24px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .centeredImage {
+        pointer-events: none;
+        transform: translateY(-100px);
+    }
+
+    h1 {
+        transform: translateY(-40px);
+    }
+
+    section {
+        text-align: center;
+        padding-top: 55px;
+        padding-bottom: 20px;
+        width: 80%;
+    }
+
+    .delveButton {
+        margin: 30px;
+    }
+
+    .socials {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .stars,
+    .twinkling,
+    .clouds {
+        height: 160%;
     }
 }
